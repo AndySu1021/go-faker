@@ -1,0 +1,19 @@
+{{define "tableFile"}}
+
+package model
+
+type {{.StructName}} struct {}
+
+func (m {{.StructName}}) TableName() string {
+	return "{{.TableName}}"
+}
+
+func (m {{.StructName}}) Definition() map[string]interface{} {
+	return map[string]interface{}{
+	    {{- range $key, $value := .Fields}}
+    	"{{$value}}": "",
+    	{{- end}}
+	}
+}
+
+{{end}}

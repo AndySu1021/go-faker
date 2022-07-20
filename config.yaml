@@ -1,0 +1,16 @@
+## Log
+logger:
+  level: 0
+  directory:
+
+# Database config
+database:
+  type: mysql
+  host: localhost
+  port: 3306
+  username: root
+  password: abcd1234
+  db_name: demo
+  max_idle_connections: 25
+  max_open_connections: 25
+  max_lifetime_sec: 300
